@@ -1,0 +1,50 @@
+$primary-light: #eee;
+$primary-dark: #333;
+$complement-light: rgb(66, 200, 66);
+$complement-dark: rgb(33, 100, 33);
+
+body {
+  background: #111;
+  color: $primary-light;
+}
+.masthead {
+  background: $primary-dark;
+  color: $primary-light;
+  padding: 1rem 3rem;
+}
+.container {
+  margin: 1rem 3rem;
+}
+
+/* gallery */
+
+.gallery {
+  display: block !important;
+  overflow: auto;
+  border: none !important;
+  background-color: transparent !important;
+}
+.gallery-image {
+  float: left;
+  width: 18.65rem;
+  height: 12rem;
+  margin: 1rem;
+  background-color: $complement-light;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1rem solid $complement-light;
+  border-radius: 1rem;
+}
+.lightbox-image {
+  width: 64rem;
+  height: 43rem;
+  background-color: $primary-light;
+  border: 1rem solid $primary-light;
+  border-radius: unset;
+}
+
+.gallery-image:not(.lightbox-image):hover {
+  border-color: $complement-dark;
+  background-color: $complement-dark;
+}
