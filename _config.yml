@@ -23,6 +23,17 @@ markdown: kramdown
 plugins:
   - jekyll-feed
 
+prose:
+  rooturl: "_posts"
+  media: "assets/images"
+  # siteurl: "http:"
+  metadata:
+    _posts:
+      - name: "title"
+        field:
+          element: "text"
+          label: "title"
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
