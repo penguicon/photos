@@ -1,0 +1,13 @@
+<div class="gallery">
+  {% assign page-title = page.title %}
+  {% assign image_extensions = '.png, .jpg, .jpeg' | split: ', ' %}
+  {% for static_file in site.static_files %}
+  {%   assign path_segments = static_file.path | split: "/"" %}
+  {%   assign folder = path_segments[3] %}
+  {%   if folder == page-title and image_extensions contains static_file.extname %}
+  <div class="gallery-image" style="background-image: url('assets/images/{{ page-title }}/{{ static_file.name }}')">
+  </div>
+  {%   endif %}
+  {% endfor %}
+  </div>
+  

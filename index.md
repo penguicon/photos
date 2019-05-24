@@ -31,7 +31,7 @@ science fiction, open source software, and all geek interests!
 {% for folder in folder_list %}
 {% unless folder == "" %}
   <li>
-    <a href="{{ folder | strip_newlines | absolute_url }}">{{ folder | replace: "_", " " | title_case }}</a>
+    <a href="{{ folder | strip_newlines | absolute_url }}">{{ folder | replace: "_", " " }}</a>
   </li>
 {% endunless %}
 {% endfor %}</ul>

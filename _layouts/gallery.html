@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>Penguicon Photos: {{ page.title }}</title>
-  <meta property="og:title" content="Penguicon Photos: {{ page.title }}" />
+  <title>{{ page.title }}</title>
+  <meta property="og:title" content="{{ page.title }}" />
   <meta property="og:url"
     content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
   <link href="assets/css/main.css" rel="stylesheet" type="text/css" media="all" />
@@ -12,6 +12,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 </head>
 <body class="gallery-page">
+  <p><a href="/">Other Penguicon Photo Galleries</a></p>
+  <h1>{{ page.title | replace: "_", " " }}</h1>
+  {{ content }}
+  {% include photos.html %}
 <script>
   $(document).ready(function () {
     var gallery_images = document.getElementsByClassName("gallery-image");
