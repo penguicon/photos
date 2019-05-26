@@ -23,6 +23,8 @@
     var makeLarge = function(e) {
       $(".gallery-image").removeClass("lightbox-image");
       $(e.target).addClass("lightbox-image");
+      $("a").removeClass("lightbox-link");
+      $(e.target).children("a").addClass("lightbox-link");
     };
 
     for (var i = 0; i < gallery_images.length; i++) {

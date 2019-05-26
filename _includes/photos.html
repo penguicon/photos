@@ -6,6 +6,7 @@
   {%   assign folder = path_segments[3] %}
   {%   if folder == page-title and image_extensions contains static_file.extname %}
   <div class="gallery-image" style="background-image: url('assets/images/{{ page-title }}/{{ static_file.name }}')">
+    <a href="/assets/images/{{ page-title }}/{{ static_file.name }}"></a>
   </div>
   {%   endif %}
   {% endfor %}
